@@ -1,0 +1,114 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaleab</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#fafafa] text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 font-sans antialiased transition-colors duration-200">
+
+    <!-- Simple Top Navigation -->
+    <header class="border-b border-neutral-200 dark:border-neutral-800 bg-[#fafafa]/90 dark:bg-neutral-950/90 sticky top-0 z-10 backdrop-blur-sm">
+        <div class="max-w-2xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#home" class="font-semibold text-base tracking-tight hover:opacity-70 transition-opacity">
+                Kaleab
+            </a>
+
+            <div class="flex items-center gap-6 text-sm text-neutral-600 dark:text-neutral-400">
+                <a href="#home" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Home</a>
+                <a href="#hobbies" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Hobbies</a>
+                <a href="#goals" class="hover:text-neutral-900 dark:hover:text-white transition-colors">Goals</a>
+                <button id="theme-toggle" class="text-xs px-2.5 py-1 rounded border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200/60 dark:hover:bg-neutral-800 transition-colors">
+                    Theme
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-2xl mx-auto px-6">
+
+        <!-- Intro / Home Section -->
+        <section id="home" class="py-16 sm:py-24 border-b border-neutral-200 dark:border-neutral-800">
+            <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-2">Welcome</p>
+            <h1 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
+                Hi, I'm Kaleab.
+            </h1>
+            <p class="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                I enjoy reading manga and novels, playing video games, and working hard to be successful and make my family proud.
+            </p>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="py-14 border-b border-neutral-200 dark:border-neutral-800">
+            <h2 class="text-lg font-semibold mb-6">My Hobbies</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="p-5 rounded-lg bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800">
+                    <p class="font-medium text-neutral-900 dark:text-neutral-100">Reading Manga &amp; Novels</p>
+                </div>
+                <div class="p-5 rounded-lg bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800">
+                    <p class="font-medium text-neutral-900 dark:text-neutral-100">Playing Video Games</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Goals Section -->
+        <section id="goals" class="py-14">
+            <h2 class="text-lg font-semibold mb-6">Future Goals</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="p-5 rounded-lg bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800">
+                    <p class="font-medium text-neutral-900 dark:text-neutral-100">Be Successful</p>
+                </div>
+                <div class="p-5 rounded-lg bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800">
+                    <p class="font-medium text-neutral-900 dark:text-neutral-100">Make My Family Proud</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Simple Footer -->
+    <footer class="max-w-2xl mx-auto px-6 py-12 border-t border-neutral-200 dark:border-neutral-800 text-sm text-neutral-500 dark:text-neutral-400 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+        <p>"Work hard, achieve success, and make my family proud."</p>
+        <p>&copy; <span id="year"></span> Kaleab</p>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Simple light/dark theme toggle
+        const themeBtn = document.getElementById('theme-toggle');
+        themeBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+    </script>
+</body>
+</html>
+
+```
+  
